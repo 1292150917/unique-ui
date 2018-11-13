@@ -1,0 +1,36 @@
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 182, 186, 0.85);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(180, 182, 186, 1);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Heiti SC',
+    'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #34495e;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

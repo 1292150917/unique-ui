@@ -1,0 +1,15 @@
+@import './fonts/style.css';
+@import './common/var';
+@import './common/ellipsis';
+@import './common/1px';
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC',
+    'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: $color-dark;
+}
+button {
+  font-family: inherit;
+  outline: none;
+  appearance: none;
+}
