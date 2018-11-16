@@ -5,14 +5,15 @@
   align-items: center;
   user-select: none;
   margin-right: 10px;
-  .i-checkbox__icon {
-    border: 1px solid $border-color;
+  cursor: pointer;
+  &__icon {
+    border: 1px solid #ddd;
     border-radius: 50%;
     font-size: $checkbox-size - 2px;
     color: transparent;
     transition: 0.2s;
   }
-  .i-checkbox__label {
+  &__label {
     font-size: 14px;
     margin-left: 5px;
   }
@@ -24,9 +25,6 @@
     }
   }
   &--disabled {
-    .i-checkbox__icon {
-      border-color: #ddd;
-      background-color: #ddd;
-    }
+    opacity: 0.5;
   }
 }

@@ -85,6 +85,12 @@ export default [
         doc: () => import('docs/checkbox'),
         demo: () => import('packages/checkbox/demo')
       },
+      {
+        name: 'Radio 单选框',
+        routePath: '/radio',
+        doc: () => import('docs/radio'),
+        demo: () => import('packages/radio/demo')
+      },
     ]
   }
 ]

@@ -16,9 +16,7 @@ module.exports = {
     chunkFilename: 'async_[name].js'
   },
   mode: 'development',
-  // devtool: 'inline-source-map',
   devtool: 'cheap-module-eval-source-map',
-  // devtool: 'eval',
   resolve: {
     extensions: ['.js', '.vue', '.json', '.md'], // 引入模块时可以省略的扩展名
     alias: {
@@ -41,6 +39,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre'
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',

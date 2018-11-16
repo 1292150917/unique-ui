@@ -16,6 +16,8 @@ import Switch from './switch'
 import CheckboxGroup from './checkbox-group'
 import Checkbox from './checkbox'
 import NoticeBar from './notice-bar'
+import RadioGroup from './radio-group'
+import Radio from './radio'
 
 export default {
   Icon,
@@ -35,5 +37,7 @@ export default {
   Switch,
   CheckboxGroup,
   Checkbox,
-  NoticeBar
+  NoticeBar,
+  RadioGroup,
+  Radio
 }

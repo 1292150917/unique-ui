@@ -9,8 +9,11 @@
 </template>
 
 <script>
+import { findParent } from 'packages/mixins'
+
 export default {
   name: 'ITabbarItem',
+  mixins: [findParent],
   data() {
     return {}
   },
@@ -21,7 +24,7 @@ export default {
   },
   computed: {
     isActive() {
-      return this.$parent.value === this.value
+      return this.parent && this.parent.value === this.value
     },
     classList() {
       return [
@@ -32,16 +35,19 @@ export default {
       ]
     },
     style() {
+      if (!this.parent) return
       return {
-        color: this.isActive ? this.$parent.activeColor : this.$parent.color
+        color: this.isActive ? this.parent.activeColor : this.parent.color
       }
     }
   },
+  created() {
+    this.findParent('ITabbar')
+  },
   methods: {
     handleClick(ev) {
-      const { $parent } = this
-      if ($parent.active !== this.value) {
-        $parent.onChange(this.value)
+      if (this.parent && this.parent.active !== this.value) {
+        this.parent.onChange(this.value)
       }
     }
   }

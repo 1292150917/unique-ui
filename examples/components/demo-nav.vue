@@ -48,8 +48,11 @@ export default {
   border-radius: 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
   cursor: pointer;
-  &.demo-nav--expand .demo-nav__title i {
-    transform: rotate(-180deg);
+  &.demo-nav--expand .demo-nav__title {
+    color: #419aff;
+    i {
+      transform: rotate(-180deg);
+    }
   }
   &:active {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
@@ -61,6 +64,7 @@ export default {
     height: 60px;
     padding: 0 20px;
     font-size: 16px;
+    transition: color 0.3s;
     i {
       transition: transform 0.3s;
       color: #ccc;
