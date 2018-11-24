@@ -18,6 +18,7 @@ import Checkbox from './checkbox'
 import NoticeBar from './notice-bar'
 import RadioGroup from './radio-group'
 import Radio from './radio'
+import Field from './field'
 
 export default {
   Icon,
@@ -39,5 +40,6 @@ export default {
   Checkbox,
   NoticeBar,
   RadioGroup,
-  Radio
+  Radio,
+  Field
 }

@@ -44,12 +44,12 @@ export default [
         doc: () => import('docs/tag'),
         demo: () => import('packages/tag/demo')
       },
-      // {
-      //   name: 'Slide 轮播图',
-      //   routePath: '/slide',
-      //   doc: () => import('docs/slide'),
-      //   demo: () => import('packages/slide/demo')
-      // },
+      {
+        name: 'Slide 轮播图',
+        routePath: '/slide',
+        doc: () => import('docs/slide'),
+        demo: () => import('packages/slide/demo')
+      },
       {
         name: 'Sticky 粘性定位',
         routePath: '/sticky',
@@ -67,12 +67,18 @@ export default [
         routePath: '/notice-bar',
         doc: () => import('docs/notice-bar'),
         demo: () => import('packages/notice-bar/demo')
-      },
+      }
     ]
   },
   {
     groupName: '表单组件',
     list: [
+      {
+        name: 'Field 输入框',
+        routePath: '/input',
+        doc: () => import('docs/field'),
+        demo: () => import('packages/field/demo')
+      },
       {
         name: 'Switch 开关',
         routePath: '/switch',
@@ -90,7 +96,7 @@ export default [
         routePath: '/radio',
         doc: () => import('docs/radio'),
         demo: () => import('packages/radio/demo')
-      },
+      }
     ]
   }
 ]

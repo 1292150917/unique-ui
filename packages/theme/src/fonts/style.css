@@ -23,7 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-forward:before {
+.icon--arrow-forward:before {
   content: "\e900";
 }
 .icon-checkmark:before {
@@ -32,6 +32,9 @@
 .icon-close:before {
   content: "\e902";
 }
-.icon-close-circle-outline:before {
+.icon-close-circle:before {
   content: "\e903";
+}
+.icon-close-circle-outline:before {
+  content: "\e904";
 }

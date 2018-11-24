@@ -10,7 +10,7 @@
       </slot>
     </div>
     <div class="i-cell__ft">
-      <slot name="value"><span class="i-cell__value">{{ value }}</span></slot>
+      <slot><slot name="value"><span class="i-cell__value">{{ value }}</span></slot></slot>
       <slot name="right-icon"><i class="i-cell__arrow fa fa-fw fa-angle-right" v-if="clickable"></i></slot>
     </div>
   </div>

@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   padding: 10px 15px;
+  background-color: #fff;
   &:not(:first-child)::after {
     content: ' ';
     position: absolute;
@@ -32,6 +33,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 10px;
     .i-cell__title {
       line-height: 28px;
     }
@@ -41,6 +43,7 @@
     }
   }
   &__ft {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;

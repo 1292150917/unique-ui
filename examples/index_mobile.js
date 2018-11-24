@@ -6,6 +6,7 @@ import 'packages/theme/src/index.scss'
 import uniqueUI from 'src'
 import DemoBlock from './components/demo-block.vue'
 import VueProgressBar from 'vue-progressbar'
+import './utils/touch-simulator'
 
 Vue.component(DemoBlock.name, DemoBlock)
 
