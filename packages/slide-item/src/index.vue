@@ -1,5 +1,7 @@
 <template>
-  <div class="i-slide-item" :style="style">
+  <div
+    class="i-slide-item"
+    :style="style">
     <slot></slot>
   </div>
 </template>

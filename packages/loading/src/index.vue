@@ -1,5 +1,7 @@
 <template>
-  <div class="i-loading" v-html="spiner">
+  <div
+    class="i-loading"
+    v-html="spiner">
 
   </div>
 </template>

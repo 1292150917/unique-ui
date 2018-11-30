@@ -14,6 +14,7 @@
 
 <script>
 import { featureTest } from 'packages/utils'
+import { on, off } from 'packages/utils/event'
 const nativeSupported = featureTest('position', 'sticky')
 
 export default {
@@ -72,15 +73,13 @@ export default {
     }
   },
   mounted() {
-    if (!nativeSupported) {
-      window.addEventListener('scroll', this.scrollHandler)
-    }
+    if (nativeSupported) return
+    on(window, 'scroll', this.scrollHandler, true)
   },
   destroyed() {
-    if (!nativeSupported) {
-      cancelAnimationFrame(this.rafTimer)
-      window.removeEventListener('scroll', this.scrollHandler)
-    }
+    if (nativeSupported) return
+    cancelAnimationFrame(this.rafTimer)
+    off(window, 'scroll', this.scrollHandler)
   },
   methods: {}
 }

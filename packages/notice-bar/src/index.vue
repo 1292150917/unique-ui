@@ -3,14 +3,20 @@
     :class="classList"
     v-show="isShow"
     @click="onClick">
-    <div class="i-notice-bar__inner" :style="innerStyle">
+    <div
+      class="i-notice-bar__inner"
+      :style="innerStyle">
       <div class="i-notice-bar__left">
         <slot name="left">
-          <i-icon name="volume-up" size="19px"></i-icon>
+          <i-icon
+            name="volume-up"
+            size="19px"></i-icon>
         </slot>
       </div>
 
-      <div class="i-notice-bar__main" ref="wrapper">
+      <div
+        class="i-notice-bar__main"
+        ref="wrapper">
         <div
           :class="contentClass"
           :style="contentStyle"

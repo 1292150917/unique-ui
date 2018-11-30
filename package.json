@@ -4,7 +4,9 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --progress --config build/webpack.dev.config.js"
+    "dev": "webpack-dev-server --hot --inline --progress --config build/webpack.dev.config.js",
+    "lint": "eslint --ext .js,.vue src packages",
+    "lint:fix": "eslint --fix --ext .js,.vue src packages"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

@@ -3,7 +3,11 @@
     :class="classList"
     :style="style"
     @click="handleClick">
-    <slot name="icon" :active="isActive"><i class="i-tabbar-item__icon" :class="`fa fa-fw fa-${icon}`"></i></slot>
+    <slot
+      name="icon"
+      :active="isActive"><i
+        class="i-tabbar-item__icon"
+        :class="`fa fa-fw fa-${icon}`"></i></slot>
     <span class="i-tabbar-item__text">{{ label }}</span>
   </div>
 </template>

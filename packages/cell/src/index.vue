@@ -1,17 +1,39 @@
 <template>
-  <div :class="classList" @click="onClick">
-    <div class="i-cell__hd">
-      <slot name="icon"><i :class="`i-cell__icon fa fa-fw fa-${this.icon}`" v-if="icon" /></slot>
-    </div>
-    <div class="i-cell__bd">
-      <slot name="title">
-        <span class="i-cell__title">{{ title }}</span>
-        <span class="i-cell__desc" v-if="desc">{{ desc }}</span>
+  <div
+    :class="classList"
+    @click="onClick"
+  >
+    <div
+      v-if="icon || $slots['icon']"
+      class="i-cell__icon"
+    >
+      <slot name="icon">
+        <i :class="`fa fa-fw fa-${this.icon}`"/>
       </slot>
     </div>
-    <div class="i-cell__ft">
-      <slot><slot name="value"><span class="i-cell__value">{{ value }}</span></slot></slot>
-      <slot name="right-icon"><i class="i-cell__arrow fa fa-fw fa-angle-right" v-if="clickable"></i></slot>
+    <div class="i-cell__hd">
+      <slot name="title">
+        <span class="i-cell__title">{{ title }}</span>
+        <span
+          class="i-cell__desc"
+          v-if="desc"
+        >{{ desc }}</span>
+      </slot>
+    </div>
+    <div class="i-cell__bd">
+      <slot>
+        <slot name="value">
+          <span class="i-cell__value">{{ value }}</span>
+        </slot>
+      </slot>
+    </div>
+    <div
+      v-if="clickable || $slots['right-icon']"
+      class="i-cell__ft"
+    >
+      <slot name="right-icon">
+        <i class="i-cell__arrow fa fa-fw fa-angle-right"></i>
+      </slot>
     </div>
   </div>
 </template>

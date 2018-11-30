@@ -1,7 +1,15 @@
 <template>
-  <div :class="classList" @click.stop="toggle">
-    <slot name="icon" :checked="checked"><i class="i-radio__icon" :style="iconStyle" /></slot>
-    <span class="i-radio__label" v-if="$slots.default">
+  <div
+    :class="classList"
+    @click.stop="toggle">
+    <slot
+      name="icon"
+      :checked="checked"><i
+        class="i-radio__icon"
+        :style="iconStyle" /></slot>
+    <span
+      class="i-radio__label"
+      v-if="$slots.default">
       <slot></slot>
     </span>
   </div>

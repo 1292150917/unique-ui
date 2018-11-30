@@ -10,9 +10,13 @@
       @transitionend="onTransitionEnd">
       <slot></slot>
     </div>
-    <slot name="indicator" :active="activeIndicator">
+    <slot
+      name="indicator"
+      :active="activeIndicator">
       <ul class="i-slide__indicators">
-        <li v-for="index in count" :class="{ 'i-slide__indicator': true, active: index - 1 === activeIndicator }"></li>
+        <li
+          v-for="index in count"
+          :class="{ 'i-slide__indicator': true, active: index - 1 === activeIndicator }"></li>
       </ul>
     </slot>
   </div>

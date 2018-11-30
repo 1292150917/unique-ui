@@ -1,5 +1,15 @@
 <template>
-  <i-cell :class="classList" :title="label">
+  <i-cell
+    :class="classList"
+    :title="label"
+    :icon="icon"
+  >
+    <div
+      v-if="$slots['icon']"
+      slot="icon"
+    >
+      <slot name="icon"></slot>
+    </div>
     <div class="i-field__body">
       <textarea v-if="type === 'textarea'"></textarea>
       <input
@@ -10,11 +20,19 @@
         :value="value"
         :readonly="readonly"
         v-on="listeners"
-        v-bind="$attrs">
+        v-bind="$attrs"
+      >
       <i
         v-if="showClear"
         class="i-field__clear icon-close-circle"
-        @touchstart.prevent="onClear"></i>
+        @touchstart.prevent="onClear"
+      ></i>
+    </div>
+    <div
+      v-if="$slots['right-icon']"
+      slot="right-icon"
+    >
+      <slot name="right-icon"></slot>
     </div>
   </i-cell>
 </template>
@@ -22,11 +40,13 @@
 <script>
 export default {
   name: 'IField',
+  inheritAttrs: false,
   props: {
     type: {
       type: String,
       default: 'input'
     },
+    icon: String,
     value: [String, Number],
     label: String,
     labelAlign: String,

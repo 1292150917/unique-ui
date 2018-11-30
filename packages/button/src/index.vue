@@ -3,7 +3,9 @@
     :disabled="isDisable"
     :class="classList"
     @click="cb">
-    <i class="fa fa-refresh fa-spin" v-if="loading" />
+    <i
+      class="fa fa-refresh fa-spin"
+      v-if="loading" />
     <slot />
   </button>
 </template>
