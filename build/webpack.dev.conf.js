@@ -2,23 +2,24 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
-var hljs = require('highlight.js')
+const hljs = require('highlight.js')
 
 module.exports = {
+  mode: 'development',
   // 配置多入口，一个是文档，一个是demo
   entry: {
     'unique-docs': './examples/index_docs.js',
     'unique-mobile': './examples/index_mobile.js'
   },
   output: {
-    path: path.resolve(__dirname, '../docs/dist'),
+    path: path.resolve(__dirname, '../examples/dist'),
     publicPath: '/',
-    chunkFilename: 'async_[name].js'
+    chunkFilename: 'async_[name].js',
+    libraryTarget: 'umd'
   },
-  mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.md'], // 引入模块时可以省略的扩展名
+    extensions: ['.js', '.vue', '.md'], // 引入模块时可以省略的扩展名
     alias: {
       vue$: 'vue/dist/vue.esm.js',
       src: path.resolve(__dirname, '../src'),
@@ -27,9 +28,10 @@ module.exports = {
       packages: path.resolve(__dirname, '../packages')
     }
   },
+  externals: [/^normalize\.css$/, /^font-awesome/],
   // webpack-dev-server
   devServer: {
-    contentBase: path.resolve(__dirname, '../lib'),
+    contentBase: path.resolve(__dirname, '../examples/dist'),
     clientLogLevel: 'warning',
     compress: true,
     port: 3000,

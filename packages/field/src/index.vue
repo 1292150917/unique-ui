@@ -11,16 +11,20 @@
       <slot name="icon"></slot>
     </div>
     <div class="i-field__body">
-      <textarea v-if="type === 'textarea'"></textarea>
+      <textarea
+        v-if="type === 'textarea'"
+        ref="control"
+      ></textarea>
       <input
         v-else
+        v-bind="$attrs"
+        v-on="listeners"
+        ref="control"
         :class="controlClassList"
         :style="controlStyle"
         :type="type"
         :value="value"
         :readonly="readonly"
-        v-on="listeners"
-        v-bind="$attrs"
       >
       <i
         v-if="showClear"
@@ -77,7 +81,7 @@ export default {
       }
     },
     showClear() {
-      return this.clearable && this.focused && this.value !== '' && !this.readonly
+      return this.clearable && this.focused && this.value && !this.readonly
     },
     listeners() {
       return {
@@ -92,6 +96,8 @@ export default {
     onFocus(ev) {
       this.focused = true
       this.$emit('focus', ev)
+
+      if (this.readonly) this.$refs['control'].blur()
     },
     onBlur(ev) {
       this.focused = false

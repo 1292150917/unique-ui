@@ -17,15 +17,15 @@
     background-color: transparent;
     &:disabled {
       opacity: 1;
-      color: #666;
-      -webkit-text-fill-color: #666;
+      color: #999;
+      -webkit-text-fill-color: #999;
     }
     &::placeholder {
       color: #bbb;
     }
   }
   &__clear {
-    font-size: 18px;
+    font-size: 20px;
     color: #ccc;
   }
 }

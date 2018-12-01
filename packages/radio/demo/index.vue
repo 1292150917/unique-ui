@@ -14,7 +14,7 @@
         <i-radio-group v-model="value2">
           <i-radio :value="0" color="#2ab9cd">a</i-radio>
           <i-radio :value="1" color="#ff7e4a">b</i-radio>
-          <i-radio :value="2" color="#ffb137">c</i-radio>
+          <i-radio :value="2" color="#93c653">c</i-radio>
         </i-radio-group>
       </div>
     </demo-block>
