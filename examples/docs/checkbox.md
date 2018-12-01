@@ -36,7 +36,7 @@ export default {
 #### 自定义状态值
 
 ```html
-<i-checkbox v-model="value3" :true-value="1" :false-value="0">{{ `value: ${value3}` }}</i-checkbox>
+<i-checkbox v-model="value3" :true-value="1" :false-value="0">value: {{ value3 }}</i-checkbox>
 ```
 
 #### 禁用

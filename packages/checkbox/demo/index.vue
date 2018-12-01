@@ -12,7 +12,7 @@
     </demo-block>
     <demo-block title="自定义状态值">
       <div class="wrapper">
-        <i-checkbox v-model="value3" :true-value="1" :false-value="0">{{ `value: ${value3}` }}</i-checkbox>
+        <i-checkbox v-model="value3" :true-value="1" :false-value="0">value: {{ value3 }}</i-checkbox>
       </div>
     </demo-block>
     <demo-block title="禁用">
