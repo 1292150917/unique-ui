@@ -1,5 +1,3 @@
-# unique-ui
-
 <p align="center">
   <a href="https://xiaojun1994.github.io/unique-ui/examples/dist/index.html">
     <img alt="logo" src="https://xiaojun1994.github.io/unique-ui/examples/assets/images/logo.png" height="120" style="margin-bottom: 10px;">
