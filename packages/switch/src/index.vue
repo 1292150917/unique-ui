@@ -8,7 +8,7 @@
         v-if="loading"
         type="crescent"
         size="16px"
-        color="#ddd"></i-loading>
+        color="#ccc"></i-loading>
     </div>
   </div>
 </template>

@@ -99,13 +99,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      chunks: ['unique-docs', 'vendor'],
+      chunks: ['vendor', 'unique-docs'],
       template: './examples/index.html',
       filename: 'index.html',
       inject: true
     }),
     new HtmlWebpackPlugin({
-      chunks: ['unique-mobile', 'vendor'],
+      chunks: ['vendor', 'unique-mobile'],
       template: './examples/index.html',
       filename: 'mobile.html',
       inject: true

@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../examples/dist'),
     publicPath: '/',
-    chunkFilename: 'async_[name].js',
+    chunkFilename: 'chunk_[name].js',
     libraryTarget: 'umd'
   },
   devtool: 'cheap-module-eval-source-map',
