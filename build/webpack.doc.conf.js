@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../examples/dist'),
     publicPath: './',
-    chunkFilename: 'chunk_[name].js',
+    chunkFilename: 'chunk_[name].[chunkhash:8].js',
     libraryTarget: 'umd'
   },
   resolve: {
