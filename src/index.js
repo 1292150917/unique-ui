@@ -21,6 +21,7 @@ import NoticeBar from 'packages/notice-bar'
 import RadioGroup from 'packages/radio-group'
 import Radio from 'packages/radio'
 import Field from 'packages/field'
+import Toast from 'packages/toast'
 
 const components = [
   Icon,
@@ -67,13 +68,16 @@ export {
   NoticeBar,
   RadioGroup,
   Radio,
-  Field
+  Field,
+  Toast
 }
 
 const install = function(Vue) {
   components.forEach(component => {
     Vue.component(component.name, component)
   })
+
+  Vue.use(Toast)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

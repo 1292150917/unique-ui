@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://xiaojun1994.github.io/unique-ui/examples/dist/index.html">
+  <a href="https://xiaojun1994.github.io/unique-ui/examples/dist/index.html" target="_blank">
     <img alt="logo" src="https://xiaojun1994.github.io/unique-ui/examples/assets/images/logo.png" height="120" style="margin-bottom: 10px;">
   </a>
 </p>

@@ -98,5 +98,16 @@ export default [
         demo: () => import('packages/radio/demo')
       }
     ]
+  },
+  {
+    groupName: '反馈组件',
+    list: [
+      {
+        name: 'Toast 消息提示',
+        routePath: '/toast',
+        doc: () => import('docs/toast'),
+        demo: () => import('packages/toast/demo')
+      }
+    ]
   }
 ]
