@@ -1,7 +1,0 @@
-﻿node_modules
-examples/dist
-lib
-*.log*
-.DS_Store
-.idea
-.vscode
